@@ -10,7 +10,7 @@ def verify_password(password_hash, password):
     return pwd_context.verify(password, password_hash)
 
 
-class User(Document):
+class UserBean(Document):
     name = StringField(max_length=10)
     company = StringField(max_length=30)
     phone_num = StringField(unique=True, max_length=11)
